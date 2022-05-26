@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  testsoftdesign:
+    build: .
+    container_name: testsoftdesign
+    ports:
+      - "3344:3344"
+    volumes:
+      - .:/home/node/app/
+      - /home/node/app/node_modules
+    environment:
+      - APP_URL=http://localhost:3344
+      - APP_WEB_URL=http://localhost:3000
+      - MAIL_DRIVER=smtp
+      - MAIL_HOST=smtp.meusite.com.br
+      - MAIL_PORT=587
+      - MAIL_SECURE=false
+      - MAIL_USER=meuemail@meuemail.com.br
+      - MAIL_PASS=minhasenha
+    command: yarn dev:server
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    networks:
+      - testsoftdesign-network
+
+networks:
+  testsoftdesign-network:
+    driver: bridge
