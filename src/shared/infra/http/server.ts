@@ -13,7 +13,7 @@ import '@shared/container';
 
 const app = express();
 
-app.use(cors({ origin: 'https://rszaneti.github.io/', credentials: true }));
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 

@@ -10,15 +10,15 @@ services:
       - .:/home/node/app/
       - /home/node/app/node_modules
     environment:
-      - APP_URL=http://localhost:3344
-      - APP_WEB_URL=http://localhost:3000
+      - APP_WEB_URL=https://rodociclo.com.br
+      - APP_API_URL=https://test-softdesign.eadconcept.app.br
       - MAIL_DRIVER=smtp
-      - MAIL_HOST=smtp.meusite.com.br
+      - MAIL_HOST=smtp.eadconcept.com.br
       - MAIL_PORT=587
       - MAIL_SECURE=false
-      - MAIL_USER=meuemail@meuemail.com.br
-      - MAIL_PASS=minhasenha
-    command: yarn dev:server
+      - MAIL_USER=rodrigo@eadconcept.com.br
+      - MAIL_PASS=Rsz&1979&07
+    command: yarn start
     logging:
       driver: "json-file"
       options:
