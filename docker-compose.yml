@@ -13,11 +13,11 @@ services:
       - APP_WEB_URL=https://rodociclo.com.br
       - APP_API_URL=https://test-softdesign.eadconcept.app.br
       - MAIL_DRIVER=smtp
-      - MAIL_HOST=smtp.eadconcept.com.br
+      - MAIL_HOST=smtp.meudominio.com.br
       - MAIL_PORT=587
       - MAIL_SECURE=false
-      - MAIL_USER=rodrigo@eadconcept.com.br
-      - MAIL_PASS=Rsz&1979&07
+      - MAIL_USER=email@meudominio.com.br
+      - MAIL_PASS=pass
     command: yarn start
     logging:
       driver: "json-file"
