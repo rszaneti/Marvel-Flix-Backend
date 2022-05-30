@@ -10,7 +10,7 @@ services:
       - .:/home/node/app/
       - /home/node/app/node_modules
     environment:
-      - APP_WEB_URL=https://rodociclo.com.br
+      - APP_WEB_URL=https://rszaneti.github.io/marvel-flix-frontend/
       - APP_API_URL=https://test-softdesign.eadconcept.app.br
       - MAIL_DRIVER=smtp
       - MAIL_HOST=smtp.meudominio.com.br
